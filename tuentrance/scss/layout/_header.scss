@@ -1,0 +1,155 @@
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 9999;
+  @media (max-width: 991px) {
+    padding: 5px 0px;
+  }
+  .container {
+    @include d-flex;
+    gap: 100px;
+    @media (max-width: 991px) {
+      justify-content: space-between;
+      gap: 0px;
+    }
+    .navbar-brand {
+      span{
+        color: $primary-color;
+      }
+    }
+    nav {
+      padding: 15px 0px;
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          padding-right: 20px;
+          color: rgb(235, 235, 235);
+          font-size: 0.875rem;
+          font-weight: 600;
+          &:last-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#SideNav.open {
+  right: 0px;
+  opacity: 1;
+}
+
+#SideNav {
+  transition: all 0.3s linear;
+  z-index: 9999;
+  @media (max-width: 991px) {
+    position: fixed;
+    right: -100%;
+    top: 0px;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    height: 100vh;
+    opacity: 0;
+    ul {
+      background-color: #ededed;
+      padding: 10px;
+      border-radius: 5px;
+      li {
+        display: block;
+        color: #303030;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+.search-mobile-nav{
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  align-items: center;
+}
+.Search-icons {
+  color: white;
+}
+.mbl-view {
+  display: none;
+  @media (max-width: 991px) {
+    display: flex;
+  }
+}
+
+.desktop-view {
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.sidenavCloseBtn,
+.sidenavOpenBtn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  @media (max-width: 991px) {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+
+
+.sidenavCloseBtn {
+  background-color: $secondary-color !important;
+  padding: 5px 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  border-radius: 3px;
+}
+
+.sub-nav-btn {
+  display: flex;
+  position: sticky;
+  top: 51px;
+  z-index: 999;
+  .aside-filter-open-btn {
+    background-color: $primary-color;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+  }
+  .institute-near-me-btn {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+  }
+  .send-us-inquiry-btn{
+    background-color: #097fc7;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+.member-register {
+  display: none;
+  background-color: #ededed;
+  padding: 10px;
+  border-radius: 5px;
+  @media (max-width: 991px) {
+    display: block;
+  }
+}

@@ -1,0 +1,35 @@
+@import "mixin";
+
+.tab-panel {
+  .tab-nav {
+    @include d-flex;
+    gap: 5px;
+    @media (max-width: 480px) {
+      gap: 0px;
+    }
+    .tab-link {
+      border: none;
+      padding: 5px 10px;
+      font-weight: 700;
+      background: transparent;
+      cursor: pointer;
+      color: #303030;
+      @media (max-width: 480px) {
+        font-size: 0.675rem;
+        white-space: nowrap;
+      }
+    }
+    .tab-link.active {
+      color: $secondary-color;
+      border-bottom: 3px solid $secondary-color;
+    }
+  }
+  .tab-content {
+    display: none;
+    padding-top: 15px;
+  }
+  .tab-content.active {
+    display: block;
+    border-top: 1px solid rgb(190, 190, 190);
+  }
+}
